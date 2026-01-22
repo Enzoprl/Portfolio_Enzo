@@ -1,0 +1,107 @@
+:root{
+  --hero-min: 92vh;
+}
+
+/* évite que la navbar fixed cache les ancres */
+.section{
+    scroll-margin-top: 90px;
+    padding: 40px 0;
+  }
+
+.section-alt{
+  background: #f7f7f9;
+}
+
+.section-title{
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  margin-bottom: 12px;
+}
+
+/* HERO */
+.hero{
+    min-height: auto;               /* <-- enlève le 92vh */
+    padding-top: 110px;             /* <-- espace juste pour la navbar */
+    padding-bottom: 20px;
+    background: radial-gradient(1200px 600px at 20% 20%, rgba(13,110,253,.18), transparent 60%),
+                radial-gradient(900px 500px at 80% 10%, rgba(25,135,84,.14), transparent 55%),
+                #ffffff;
+  }
+  
+  @media (max-width: 576px){
+    .hero{ padding-top: 140px; }    /* moins que 160px */
+  }
+
+.icon-link{
+  color: inherit;
+  opacity: .8;
+  transition: transform .15s ease, opacity .15s ease;
+}
+.icon-link:hover{
+  transform: translateY(-2px);
+  opacity: 1;
+}
+
+/* About */
+.about-photo{
+  border-radius: 20px;
+  overflow: hidden;
+  border: 1px solid rgba(0,0,0,.08);
+}
+.photo-placeholder{
+  height: 320px;
+  background: linear-gradient(135deg, rgba(0,0,0,.04), rgba(0,0,0,.02));
+}
+
+/* Projects */
+.project-card{
+  border-radius: 18px;
+  overflow: hidden;
+}
+.project-thumb {
+  height: 160px; /* Hauteur du conteneur */
+  background: white; /* Couleur de fond blanche */
+  display: flex; /* Permet d'aligner l'image au centre */
+  justify-content: center; /* Centre horizontalement */
+  align-items: center; /* Centre verticalement */
+  border-bottom: 1px solid #d3d3d3; /* Ajout d'un trait gris en bas */
+}
+.project-thumb img {
+  max-width: 100%; /* L'image ne dépassera pas la largeur du conteneur */
+  max-height: 100%; /* L'image ne dépassera pas la hauteur du conteneur */
+  object-fit: contain; /* L'image sera contenue dans le conteneur sans être rognée */
+}
+
+/* Liste avec check */
+.list-check{
+  list-style: none;
+  padding-left: 0;
+}
+.list-check li{
+  padding-left: 1.75rem;
+  position: relative;
+  margin-bottom: .5rem;
+}
+.list-check li::before{
+  content: "✓";
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-weight: 700;
+  opacity: .75;
+}
+
+#about{
+    padding-top: 10px !important;
+  }
+  
+  #about .section-title{
+    margin-top: 0;
+  }
+
+/* Ancien style (optionnel) : jumbotron, si tu l’utilises ailleurs */
+header.jumbotron{
+  background-image: url(https://via.placeholder.com/1500x600);
+  background-size: cover;
+  background-position: center;
+}
