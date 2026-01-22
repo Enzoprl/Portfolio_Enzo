@@ -1,2 +1,8 @@
 User-agent: *
 Disallow: /
+
+# Ignorer les fichiers système macOS
+.DS_Store
+[.DS_Store](http://_vscodecontentref_/1)
+assets/Blender [.DS_Store](http://_vscodecontentref_/2)
+assets/Blender /Phare [.DS_Store](http://_vscodecontentref_/3)
